@@ -6,10 +6,6 @@ class ChoreSerializer < ActiveModel::Serializer
   end
   
   def completed
-      if object.completed
-         "Completed"
-      else
-          "Pending"
-      end
+      object.status
   end
 end
